@@ -6,6 +6,9 @@ import Provider from "@components/Provider";
 export const metadata = {
   title: "Promptopia",
   description: "Discover & Share AI Prompts",
+  icons: {
+    icon: ["/favicon.ico?v=4"],
+  },
 };
 
 const RootLayout = ({ children }) => (
@@ -16,7 +19,7 @@ const RootLayout = ({ children }) => (
           <div className="gradient" />
         </div>
 
-        <main className="app">
+        <main className=" app">
           <Nav />
           {children}
         </main>

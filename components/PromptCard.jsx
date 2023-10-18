@@ -23,7 +23,7 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
   const handleCopy = () => {
     setCopied(post.prompt);
     navigator.clipboard.writeText(post.prompt);
-    setTimeout(() => setCopied(false), 3000);
+    setTimeout(() => setCopied(false), 1000);
   };
 
   return (
@@ -42,10 +42,10 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
           />
 
           <div className="flex flex-col">
-            <h3 className="font-satoshi font-semibold text-gray-900">
+            <h3 className="font-inter font-semibold text-gray-900 tracking-wide">
               {post.creator.username}
             </h3>
-            <p className="font-inter text-sm text-gray-500">
+            <p className="font-inter text-sm text-gray-400">
               {post.creator.email}
             </p>
           </div>
@@ -59,8 +59,8 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
                 : "/assets/icons/copy.svg"
             }
             alt={copied === post.prompt ? "tick_icon" : "copy_icon"}
-            width={12}
-            height={12}
+            width={18}
+            height={18}
           />
         </div>
       </div>
